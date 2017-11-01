@@ -2,7 +2,7 @@ var http=require('http');
 var fs=require('fs');
 var exp=require('express');
 var app=exp();
-app.use('/Fonts',express.static('Fonts'));
+app.use('/Fonts',exp.static('Fonts'));
 var server = http.createServer(function(req,res){
 	console.log('requested by: '+req.url);
 	if((req.url==='/home')||(req.url==='/')||(req.url==='/home.htm'))
