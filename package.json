@@ -1,0 +1,27 @@
+{
+  "name": "website",
+  "version": "1.2.0",
+  "description": "Small website for school",
+  "main": "mainscript.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shashwat-garg/holiday_website.git"
+  },
+  "keywords": [
+    "kanwartara",
+    "school",
+    "mandleshwar"
+  ],
+  "author": "Shashwat Garg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shashwat-garg/holiday_website/issues"
+  },
+  "homepage": "https://github.com/shashwat-garg/holiday_website#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}

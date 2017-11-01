@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<title>Shri Kanwartara Public Higher Secondary School Mandleshwar</title>
+<head>
+<style>
+@-webkit-keyframes title
+{
+	0%{text-shadow:5px 5px 15px rgb(0,0,255);}
+	25%{text-shadow:5px 5px 15px rgb(0,0,255),5px 5px 25px rgb(0,0,200);}
+	50%{text-shadow:5px 5px 15px rgb(0,0,255),5px 5px 25px rgb(0,0,200),5px 5px 35px rgb(0,0,100);}
+	75%{text-shadow:5px 5px 15px rgb(0,0,255),5px 5px 25px rgb(0,0,200);}
+	100%{text-shadow:5px 5px 15px rgb(0,0,255);}
+}
+@keyframes title
+{
+	0%{text-shadow:5px 5px 15px rgb(0,0,255);}
+	25%{text-shadow:5px 5px 15px rgb(0,0,255),5px 5px 20px rgb(0,0,200);}
+	50%{text-shadow:5px 5px 15px rgb(0,0,255),5px 5px 20px rgb(0,0,200),5px 5px 25px rgb(0,0,100);}
+	75%{text-shadow:5px 5px 15px rgb(0,0,255),5px 5px 20px rgb(0,0,200);}
+	100%{text-shadow:5px 5px 15px rgb(0,0,255);}
+}
+@font-face
+{
+	font-family:headerFont;
+	src:url("Fonts/BRADHITC.TTF");
+}
+@font-face
+{
+	font-family:Calibri;
+	src:url("Fonts/calibri.TTF");
+}
+h1 {
+    color: blue;
+    text-align: center;
+	font-variant:small-caps;
+	animation:title 5s linear 0s infinite alternate;
+	-webkit-animation:title 5s linear 0s infinite alternate;
+	-webkit-transition:font-size 0.4s linear;
+	-moz-transition:font-size 0.4s linear;
+	transition:font-size 0.4s linear;
+	font-family:headerFont;
+	font-weight:bold;
+}
+h1:hover
+{
+	font-size:40px;
+	-webkit-transition:font-size 0.4s linear;
+	-moz-transition:font-size 0.4s linear;
+	transition:font-size 0.4s linear;
+}
+#headimg
+{
+	opacity:1;
+	height:400px;
+	width:100%;
+	position:relative;
+}
+h2{counter-reset:number;}
+#headimg:hover{opacity:0.7;}
+ul
+{
+	background-color:#666;
+	border: 2px solid #444;
+	margin:0;
+	padding:0;
+	list-style-type:none;
+	position:fixed;
+	overflow:hidden;
+	width:99%;
+	z-index:1;
+	top:0px;
+}
+li{float:left;}
+li a,.drpbtn a
+{
+	display:block;
+	padding:24px;
+	text-align:center;
+	text-decoration:none;
+	color:#ddd;
+	font-family:"Calibri";
+	font-size:20px;
+}
+li a:hover,.drpbtn a:hover
+{
+	background-color:#fff;
+	color:#444;
+	cursor:pointer;
+}
+li a:active
+{
+	background-color:#ccc;
+	color:black;
+}
+#current
+{
+	background-color:#ccc;
+	color:black;
+}
+.dropdown-cont
+{
+	display:none;
+	background-color:#eee;
+	border:2px solid #aaa;
+	z-index:1;
+	padding:0;
+	margin:0;
+	position:fixed;
+	box-shadow:0 5px 8px 5px rgba(0,0,0,0.2);
+	left:95px;
+}
+.dropdown-cont a
+{
+	color:#111;
+	padding:15px;
+	text-align:center;
+	font-family:"Calibri";
+	font-size:18px;
+	text-decoration:none;
+	display:block;
+}
+.dropdown-cont a:hover
+{
+	background-color:#444;
+	color:#eee;
+}
+.drpbtn:hover .dropdown-cont
+{
+	display:block;
+	cursor:pointer;
+}
+#gallabel
+{
+	color:#aaa;
+	font-family:Calibri;
+	font-size:30px;
+	margin-top:100px;
+	margin-left:100px;
+	padding:10px;
+	border-bottom:5px groove #aaa;
+	width:200px;
+	text-align:center;
+}
+#galimg
+{
+	margin:50px;
+	border:2px solid #aaa;
+	float:left;
+}
+#galimg:hover
+{border:2px solid #000;}
+#galdesc
+{
+	text-align:center;
+	color:black;
+	margin:5px;
+	padding:10px;
+	font-family:Calibri;
+	font-size:20px;
+}
+#galimg:hover #galdesc{color:#aaa;}
+#galdesc::after
+{
+	counter-increment:number;
+	content:" "counter(number);
+}
+#rightali
+{
+	float:right;
+}
+@media only screen and (max-width:800px)
+{
+	ul,li
+	{
+		width:100%;
+		clear:both;
+		border:1px solid #aaa;
+		display:block;
+		position:static;	
+	}
+	.dropdown-cont, .dropdown-cont a
+	{
+		width:100%;
+		position:static;
+		left:0px;
+		text-align:center;
+		background-color:#222;
+		color:white;
+		clear:both;
+	}
+	.dropdown-cont:hover, .dropdown-cont a:hover
+	{
+		background-color:#eee;
+		color:#111;
+	}
+}
+</style>
+</head>
+<body>
+<ul>
+	<li><a href="home.htm">Home</a></li>
+	<li class="drpbtn"><a href="#">Academics</a>
+	<div class="dropdown-cont" style="display:fixed">
+		<a href="#pre-primary">Pre-Primary</a>
+		<a href="#primary">Primary</a>
+		<a href="#secondary">Secondary</a>
+		<a href="#sen-sec">Senior Secondary</a>
+	</div></li>
+	<li><a href="#" id="current">Co-corricular</a></li>
+	<li><a href="contacts.htm">Contacts</a></li>
+	<li id="rightali"><a href="about.htm">About</a></li>
+	<li id="rightali"><a href="login.htm">Login\Register</a></li>
+</ul>
+<img src="https://drive.google.com/uc?id=0B6AG6Xrzjm5nd09IUDZIdzVuOEU" alt="header" id="headimg">
+<h1>Shri Kanwartara Public Higher Secondary School Mandleshwar</h1>
+<h2 id="gallabel">Republic Day</h2>
+<a target="_blank" href="https://drive.google.com/uc?id=0B6AG6Xrzjm5nMFF2eldRT0NvdUk" id="galimg" style="text-decoration:none"><img src="https://drive.google.com/uc?id=0B6AG6Xrzjm5nMFF2eldRT0NvdUk" height="200" width="300"><div id="galdesc">Republic Day</div></a>
+<a target="_blank" href="https://drive.google.com/uc?id=0B6AG6Xrzjm5nbjVESzNTZ1BTUFE" id="galimg" style="text-decoration:none"><img src="https://drive.google.com/uc?id=0B6AG6Xrzjm5nbjVESzNTZ1BTUFE" height="200" width="300"><div id="galdesc">Republic Day</div></a>
+<a target="_blank" href="https://drive.google.com/uc?id=0B6AG6Xrzjm5nUVIySU9IcXJieGM" id="galimg" style="text-decoration:none"><img src="https://drive.google.com/uc?id=0B6AG6Xrzjm5nUVIySU9IcXJieGM" height="200" width="300"><div id="galdesc">Republic Day</div></a>
+<a target="_blank" href="https://drive.google.com/uc?id=0B6AG6Xrzjm5nLThIT0NJVzRmc0k" id="galimg" style="text-decoration:none"><img src="https://drive.google.com/uc?id=0B6AG6Xrzjm5nLThIT0NJVzRmc0k" height="200" width="300"><div id="galdesc">Republic Day</div></a>
+<a target="_blank" href="https://drive.google.com/uc?id=0B6AG6Xrzjm5nN0JkQ1J6b0RWVEE" id="galimg" style="text-decoration:none"><img src="https://drive.google.com/uc?id=0B6AG6Xrzjm5nN0JkQ1J6b0RWVEE" height="200" width="300"><div id="galdesc">Republic Day</div></a>
+<a target="_blank" href="https://drive.google.com/uc?id=0B6AG6Xrzjm5nbEZZRHRST1VrUGM" id="galimg" style="text-decoration:none"><img src="https://drive.google.com/uc?id=0B6AG6Xrzjm5nbEZZRHRST1VrUGM" height="200" width="300"><div id="galdesc">Republic Day</div></a>
+<a target="_blank" href="https://drive.google.com/uc?id=0B6AG6Xrzjm5nanZmOW5XNFVwaWs" id="galimg" style="text-decoration:none"><img src="https://drive.google.com/uc?id=0B6AG6Xrzjm5nanZmOW5XNFVwaWs" height="200" width="300"><div id="galdesc">Republic Day</div></a>
+<a target="_blank" href="https://drive.google.com/uc?id=0B6AG6Xrzjm5nczAybVl3M3FaMFU" id="galimg" style="text-decoration:none"><img src="https://drive.google.com/uc?id=0B6AG6Xrzjm5nczAybVl3M3FaMFU" height="200" width="300"><div id="galdesc">Republic Day</div></a>
+<a target="_blank" href="https://drive.google.com/uc?id=0B6AG6Xrzjm5nX3hoQmtreE4yaFU" id="galimg" style="text-decoration:none"><img src="https://drive.google.com/uc?id=0B6AG6Xrzjm5nX3hoQmtreE4yaFU" height="200" width="300"><div id="galdesc">Republic Day</div></a>
+<a target="_blank" href="https://drive.google.com/uc?id=0B6AG6Xrzjm5nM21tTk80OVBEME0" id="galimg" style="text-decoration:none"><img src="https://drive.google.com/uc?id=0B6AG6Xrzjm5nM21tTk80OVBEME0" height="200" width="300"><div id="galdesc">Republic Day</div></a>
+<a target="_blank" href="https://drive.google.com/uc?id=0B6AG6Xrzjm5nbkJvdWpzZ2V5MUk" id="galimg" style="text-decoration:none"><img src="https://drive.google.com/uc?id=0B6AG6Xrzjm5nbkJvdWpzZ2V5MUk" height="200" width="300"><div id="galdesc">Republic Day</div></a>
+<h2 id="gallabel">Sport's Day</h2>
+<a target="_blank" href="https://drive.google.com/uc?id=0B6AG6Xrzjm5ndHhQYTFSZ2NyT0k" id="galimg" style="text-decoration:none"><img src="https://drive.google.com/uc?id=0B6AG6Xrzjm5ndHhQYTFSZ2NyT0k" height="200" width="300"><div id="galdesc">Sport's Day</div></a>
+<a target="_blank" href="https://drive.google.com/uc?id=0B6AG6Xrzjm5nOVJGUE1DSk5uWTQ" id="galimg" style="text-decoration:none"><img src="https://drive.google.com/uc?id=0B6AG6Xrzjm5nOVJGUE1DSk5uWTQ" height="200" width="300"><div id="galdesc">Sport's Day</div></a>
+<a target="_blank" href="https://drive.google.com/uc?id=0B6AG6Xrzjm5nc0Z0TEEyTk8tZlE" id="galimg" style="text-decoration:none"><img src="https://drive.google.com/uc?id=0B6AG6Xrzjm5nc0Z0TEEyTk8tZlE" height="200" width="300"><div id="galdesc">Sport's Day</div></a>
+<a target="_blank" href="https://drive.google.com/uc?id=0B6AG6Xrzjm5nQnRMd2tOaFJSYjQ" id="galimg" style="text-decoration:none"><img src="https://drive.google.com/uc?id=0B6AG6Xrzjm5nQnRMd2tOaFJSYjQ" height="200" width="300"><div id="galdesc">Sport's Day</div></a>
+<a target="_blank" href="https://drive.google.com/uc?id=0B6AG6Xrzjm5nSEt5dEpEdi1KNEk" id="galimg" style="text-decoration:none"><img src="https://drive.google.com/uc?id=0B6AG6Xrzjm5nSEt5dEpEdi1KNEk" height="200" width="300"><div id="galdesc">Sport's Day</div></a>
+<a target="_blank" href="https://drive.google.com/uc?id=0B6AG6Xrzjm5nMVRIc2ZGd3h3NDQ" id="galimg" style="text-decoration:none"><img src="https://drive.google.com/uc?id=0B6AG6Xrzjm5nMVRIc2ZGd3h3NDQ" height="200" width="300"><div id="galdesc">Sport's Day</div></a>
+<a target="_blank" href="https://drive.google.com/uc?id=0B6AG6Xrzjm5nM2tpa3hsQlprT28" id="galimg" style="text-decoration:none"><img src="https://drive.google.com/uc?id=0B6AG6Xrzjm5nM2tpa3hsQlprT28" height="200" width="300"><div id="galdesc">Sport's Day</div></a>
+<a target="_blank" href="https://drive.google.com/uc?id=0B6AG6Xrzjm5ncmxjdDVZaHlFcHc" id="galimg" style="text-decoration:none"><img src="https://drive.google.com/uc?id=0B6AG6Xrzjm5ncmxjdDVZaHlFcHc" height="200" width="300"><div id="galdesc">Sport's Day</div></a>
+<a target="_blank" href="https://drive.google.com/uc?id=0B6AG6Xrzjm5nTUkzZExCc3hqTTA" id="galimg" style="text-decoration:none"><img src="https://drive.google.com/uc?id=0B6AG6Xrzjm5nTUkzZExCc3hqTTA" height="200" width="300"><div id="galdesc">Sport's Day</div></a>
+<a target="_blank" href="https://drive.google.com/uc?id=0B6AG6Xrzjm5nSVVpX1pDRVFpS1U" id="galimg" style="text-decoration:none"><img src="https://drive.google.com/uc?id=0B6AG6Xrzjm5nSVVpX1pDRVFpS1U" height="200" width="300"><div id="galdesc">Sport's Day</div></a>
+<a target="_blank" href="https://drive.google.com/uc?id=0B6AG6Xrzjm5nTDk1NWV6UWtxZFU" id="galimg" style="text-decoration:none"><img src="https://drive.google.com/uc?id=0B6AG6Xrzjm5nTDk1NWV6UWtxZFU" height="200" width="300"><div id="galdesc">Sport's Day</div></a>
+<a target="_blank" href="https://drive.google.com/uc?id=0B6AG6Xrzjm5nOVdxdnRVLXdfREE" id="galimg" style="text-decoration:none"><img src="https://drive.google.com/uc?id=0B6AG6Xrzjm5nOVdxdnRVLXdfREE" height="200" width="300"><div id="galdesc">Sport's Day</div></a>
+<a target="_blank" href="https://drive.google.com/uc?id=0B6AG6Xrzjm5nb19qUm1vZUU2VE0" id="galimg" style="text-decoration:none"><img src="https://drive.google.com/uc?id=0B6AG6Xrzjm5nb19qUm1vZUU2VE0" height="200" width="300"><div id="galdesc">Sport's Day</div></a>
+<a target="_blank" href="https://drive.google.com/uc?id=0B6AG6Xrzjm5nZ1BUdURQRVc4dzg" id="galimg" style="text-decoration:none"><img src="https://drive.google.com/uc?id=0B6AG6Xrzjm5nZ1BUdURQRVc4dzg" height="200" width="300"><div id="galdesc">Sport's Day</div></a>
+<a target="_blank" href="https://drive.google.com/uc?id=0B6AG6Xrzjm5nZ1prR21Qcy1LYUE" id="galimg" style="text-decoration:none"><img src="https://drive.google.com/uc?id=0B6AG6Xrzjm5nZ1prR21Qcy1LYUE" height="200" width="300"><div id="galdesc">Sport's Day</div></a>
+<a target="_blank" href="https://drive.google.com/uc?id=0B6AG6Xrzjm5nMGJBaS1DTlBIYnM" id="galimg" style="text-decoration:none"><img src="https://drive.google.com/uc?id=0B6AG6Xrzjm5nMGJBaS1DTlBIYnM" height="200" width="300"><div id="galdesc">Sport's Day</div></a>
+<a target="_blank" href="https://drive.google.com/uc?id=0B6AG6Xrzjm5nWFZ6TTJVLUVtX2s" id="galimg" style="text-decoration:none"><img src="https://drive.google.com/uc?id=0B6AG6Xrzjm5nWFZ6TTJVLUVtX2s" height="200" width="300"><div id="galdesc">Sport's Day</div></a>
+<a target="_blank" href="https://drive.google.com/uc?id=0B6AG6Xrzjm5ncmtGT3I0UUtkbXM" id="galimg" style="text-decoration:none"><img src="https://drive.google.com/uc?id=0B6AG6Xrzjm5ncmtGT3I0UUtkbXM" height="200" width="300"><div id="galdesc">Sport's Day</div></a>
+</body>
+</html>

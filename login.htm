@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+<title>Shri Kanwartara Public Higher Secondary School Mandleshwar</title>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<style>
+/* *{box-sizing:border-box;}
+@media only screen and (max-width:500px)
+{
+	body{background:lightblue;}
+}*/
+.label
+{
+	color:green;
+	font-family:"Calibri";
+	font-size:20px;
+	padding:20px;
+}
+input[type="text"],input[type="password"]
+{
+	border:2px solid rgb(0,0,204);
+	border-radius:5px;
+	padding:12px;
+	margin:10px;
+	width:25%;
+	font-family:"Calibri";
+	font-size:18px;
+	margin-left:400px;
+	-webkit-transition:0.5s;
+	transition:0.3s;
+}
+input[type="text"]:hover, input[type="text"]:focus, input[type="password"]:hover, input[type="password"]:focus
+{
+	border:2px solid rgb(102,204,255);
+	color:black;
+	box-shadow:0 5px 8px 5px rgba(0,0,0,0.2);
+}
+select
+{
+	background-color:rgb(204,255,255);
+	font-family:Calibri;
+	font-size:20px;
+	padding:5px;
+	margin:20px;
+	width:25%;
+	color:blue;
+	text-align:center;
+	border-radius:5px 0 0 5px;
+	border:2px solid rgb(0,0,204);
+	-webkit-transition:0.5s;
+	transition:0.3s;
+}
+select:focus, select:hover
+{
+	border:2px solid rgb(0,0,255);
+	box-shadow:0 2px 5px 2px rgba(0,0,255,0.4);
+}
+input[type="radio"]
+{
+	background-color:red;
+	color:red;
+	border:2px solid blue;
+}
+@-webkit-keyframes title
+{
+	0%{text-shadow:5px 5px 15px rgb(0,0,255);}
+	25%{text-shadow:5px 5px 15px rgb(0,0,255),5px 5px 25px rgb(0,0,200);}
+	50%{text-shadow:5px 5px 15px rgb(0,0,255),5px 5px 25px rgb(0,0,200),5px 5px 35px rgb(0,0,100);}
+	75%{text-shadow:5px 5px 15px rgb(0,0,255),5px 5px 25px rgb(0,0,200);}
+	100%{text-shadow:5px 5px 15px rgb(0,0,255);}
+}
+@keyframes title
+{
+	0%{text-shadow:5px 5px 15px rgb(0,0,255);}
+	25%{text-shadow:5px 5px 15px rgb(0,0,255),5px 5px 20px rgb(0,0,200);}
+	50%{text-shadow:5px 5px 15px rgb(0,0,255),5px 5px 20px rgb(0,0,200),5px 5px 25px rgb(0,0,100);}
+	75%{text-shadow:5px 5px 15px rgb(0,0,255),5px 5px 20px rgb(0,0,200);}
+	100%{text-shadow:5px 5px 15px rgb(0,0,255);}
+}
+@font-face
+{
+	font-family:headerFont;
+	src:url("Fonts/BRADHITC.TTF");
+}
+@font-face
+{
+	font-family:Calibri;
+	src:url("Fonts/calibri.TTF");
+}
+#header {
+    color: blue;
+    text-align: center;
+	font-variant:small-caps;
+	animation:title 5s linear 0s infinite alternate;
+	-webkit-animation:title 5s linear 0s infinite alternate;
+	-webkit-transition:font-size 0.4s linear;
+	-moz-transition:font-size 0.4s linear;
+	transition:font-size 0.4s linear;
+	font-family:headerFont;
+	font-weight:bold;
+}
+#header:hover
+{
+	font-size:40px;
+	-webkit-transition:font-size 0.4s linear;
+	-moz-transition:font-size 0.4s linear;
+	transition:font-size 0.4s linear;
+}
+img
+{
+	opacity:1;
+	height:400px;
+	width:100%;
+	position:relative;
+}
+ul
+{
+	background-color:#666;
+	border: 2px solid #444;
+	margin:0;
+	padding:0;
+	list-style-type:none;
+	position:fixed;
+	overflow:hidden;
+	width:99%;
+	z-index:1;
+	top:0px;
+}
+img:hover{opacity:0.7;}
+li{float:left;}
+li a,.drpbtn a
+{
+	display:block;
+	padding:24px;
+	text-align:center;
+	text-decoration:none;
+	color:#ddd;
+	font-family:"Calibri";
+	font-size:20px;
+}
+li a:hover,.drpbtn a:hover
+{
+	background-color:#fff;
+	color:#444;
+	cursor:pointer;
+}
+li a:active
+{
+	background-color:#ccc;
+	color:black;
+}
+#current
+{
+	background-color:#ccc;
+	color:black;
+}
+.dropdown-cont
+{
+	display:none;
+	background-color:#eee;
+	border:2px solid #aaa;
+	z-index:1;
+	padding:0;
+	margin:0;
+	position:fixed;
+	box-shadow:0 5px 8px 5px rgba(0,0,0,0.2);
+	left:95px;
+}
+.dropdown-cont a
+{
+	color:#111;
+	padding:15px;
+	text-align:center;
+	font-family:"Calibri";
+	font-size:18px;
+	text-decoration:none;
+	display:block;
+}
+.dropdown-cont a:hover
+{
+	background-color:#444;
+	color:#eee;
+}
+.drpbtn:hover .dropdown-cont
+{
+	display:block;
+	cursor:pointer;
+}
+#subbut
+{
+	padding:12px;
+	background-color:orange;
+	border-radius:15px;
+	box-shadow: 0 8px #aaa;
+	text-decoration:none;
+	text-align:center;
+	display:inline-block;
+	color:red;
+	font-size:24px;
+	font-weight:bold;
+	margin:100px 0px;
+	transition:0.5s;
+}
+#subbut:hover
+{
+	color:orange;
+	background-color:red;
+	transition:0.5s;
+}
+#subbut:active
+{
+	box-shadow: 0 5px #666;
+	transform:translateY(4px);
+}
+
+#loglabel
+{
+	color:orange;
+	text-align:center;
+	font-family:Calibri;
+	font-size:30px;
+	margin:50px 0px;
+}
+#rightali
+{
+	float:right;
+}
+@media only screen and (max-width:800px)
+{
+	ul,li
+	{
+		width:100%;
+		clear:both;
+		border:1px solid #aaa;
+		display:block;
+		position:static;	
+	}
+	.dropdown-cont, .dropdown-cont a
+	{
+		width:100%;
+		position:static;
+		left:0px;
+		text-align:center;
+		background-color:#222;
+		color:white;
+		clear:both;
+	}
+	.dropdown-cont:hover, .dropdown-cont a:hover
+	{
+		background-color:#eee;
+		color:#111;
+	}
+}
+</style>
+</head>
+<body>
+<ul>
+	<li><a href="home.htm">Home</a></li>
+	<li class="drpbtn"><a href="#">Academics</a>
+	<div class="dropdown-cont" style="display:fixed">
+		<a href="#pre-primary">Pre-Primary</a>
+		<a href="#primary">Primary</a>
+		<a href="#secondary">Secondary</a>
+		<a href="#sen-sec">Senior Secondary</a>
+	</div></li>
+	<li><a href="gallery.htm">Co-corricular</a></li>
+	<li><a href="contacts.htm">Contacts</a></li>
+	<li id="rightali"><a href="about.htm">About</a></li>
+	<li id="rightali"><a href="#" id="current">Login\Register</a></li>
+</ul>
+<img src="https://drive.google.com/uc?id=0B6AG6Xrzjm5nd09IUDZIdzVuOEU" alt="header"></img>
+<h1 id="header">Shri Kanwartara Public Higher Secondary School Mandleshwar</h1>
+<h1 id="loglabel"><u>Your ID</u></h1>
+<form>
+<span class="label">Do you already have an account ?</span>
+	<input type="radio" name="account" value="yes" style="margin-left:300px" onclick="login()"><span class="label">Yes </span>
+	<input type="radio" name="account" value="no" style="margin-left:50px" onclick="register()"><span class="label">No</span><br>
+<div id="register" style="display:none">
+	<span class="label">Choose The account type:</span>
+	<select name="acctype" style="margin-left:280px" id="acctype">
+		<option name="faculty" onclick="dispFac()">Faculty</option>
+		<option name="student" onclick="dispStud()">Student</option>
+	</select>
+	<br>
+	<div id="faculty" style="display:none">
+		<span class="label">First Name:</span><input type="text" name="fname"><br>
+		<span class="label">Last Name: </span><input type="text" name="lname"><br>
+		<span class="label">Teacher ID:</span><input type="text" name="teachid" style="margin-left:405px"><br>
+		<span class="label">Password: </span><input type="password" name="pass" style="margin-left:410px"><br>
+		<span class="label">Are you a class teacher ?: </span>
+		<input type="radio" name="clstchr" value="yes" style="margin-left:300px" onclick="dispClassTeach()"><span class="label">Yes </span>
+		<input type="radio" name="clstchr" value="no" style="margin-left:50px" onclick="hideClassTeach()"><span class="label">No</span><br>
+		<div id="clastchr" style="display:none">
+			<span class="label">Class:</span>
+			<select name="classteacher" style="margin-left:440px">
+				<option name="nursery">Nursery</option>
+				<option name="lkg">L.K.G.</option>
+				<option name="ukg">U.K.G.</option>
+				<option name="st1">1st</option>
+				<option name="st2">2nd</option>
+				<option name="st3">3rd</option>
+				<option name="st4">4th</option>
+				<option name="st5">5th</option>
+				<option name="st6">6th</option>
+				<option name="st7">7th</option>
+				<option name="st8">8th</option>
+				<option name="st9">9th</option>
+				<option name="st10">10th</option>
+				<option name="st11">11th</option>
+				<option name="st12">12th</option>
+			</select>
+			<select name="section" style="margin-left:50px">
+				<option name="g">Glorious</option>
+				<option name="e">Excellent</option>
+				<option name="m">Marvellous</option>
+				<option name="s">Superb</option>
+			</select>
+		</div>
+	</div>
+	<div id="stud"  style="display:none">
+		<span class="label">First Name:</span><input type="text" name="fname"><br>
+		<span class="label">Last Name: </span><input type="text" name="lname"><br>
+		<span id="class" class="label">Select your Class:</span>
+		<select id="class" name="class" style="margin-left:350px"><br>
+			<option name="nursery">Nursery</option>
+			<option name="lkg">L.K.G.</option>
+			<option name="ukg">U.K.G.</option>
+			<option name="st1">1st</option>
+			<option name="st2">2nd</option>
+			<option name="st3">3rd</option>
+			<option name="st4">4th</option>
+			<option name="st5">5th</option>
+			<option name="st6">6th</option>
+			<option name="st7">7th</option>
+			<option name="st8">8th</option>
+			<option name="st9">9th</option>
+			<option name="st10">10th</option>
+			<option name="st11">11th</option>
+			<option name="st12">12th</option>
+		</select>
+		<select name="section" style="margin-left:50px">
+			<option name="g">Glorious</option>
+			<option name="e">Excellent</option>
+			<option name="m">Marvellous</option>
+			<option name="s">Superb</option>
+		</select>
+		<span class="label">Student Roll No.:</span><input type="text" name="rollno" style="margin-left:355px"><br>
+		<span class="label">Date of Birth (as DDMMYYYY e.g. 08061997): </span><input type="password" name="dob" style="margin-left:125px"><br>
+	</div>
+</div>
+<div id="login" style="display:none">
+	<span class="label">Choose The account type:</span>
+	<select name="acctype" style="margin-left:280px" id="acctype">
+		<option name="faculty" onclick="Faclog()">Faculty</option>
+		<option name="student" onclick="Studlog()">Student</option>
+	</select><br>
+	<div id="logFac" style="display:none">
+		<span class="label">Teacher ID:</span><input type="text" name="teachid"><br>
+		<span class="label">Password: </span><input type="password" name="pass"><br>
+	</div>
+	<div id="logStud" style="display:none">
+		<span class="label">Student Roll No.:</span><input type="text" name="rollno" style="margin-left:350px"><br>
+		<span class="label">Date of Birth (as DDMMYYYY e.g. 08061997): </span><input type="password" name="dob" style="margin-left:120px"><br>
+	</div>
+</div>
+<div style="text-align:center;display:none" id="subdiv">
+	<button type="submit" id="subbut">Submit</button>
+</div>
+</form>
+<script>
+function Studlog()
+{
+	document.getElementById("logStud").style.display="block";
+	document.getElementById("logFac").style.display="none";
+	document.getElementById("subdiv").style.display="block";
+}
+function Faclog()
+{
+	document.getElementById("logFac").style.display="block";
+	document.getElementById("logStud").style.display="none";
+	document.getElementById("subdiv").style.display="block";
+}
+function login()
+{
+	document.getElementById("login").style.display="block";
+	document.getElementById("register").style.display="none";
+}
+function register()
+{
+	document.getElementById("register").style.display="block";
+	document.getElementById("login").style.display="none";
+}
+function dispFac()
+{
+	document.getElementById("faculty").style.display="block";
+	document.getElementById("stud").style.display="none";
+}
+function dispStud()
+{
+	document.getElementById("faculty").style.display="none";
+	document.getElementById("stud").style.display="block";
+	document.getElementById("subdiv").style.display="block";
+}
+function dispClassTeach()
+{
+	document.getElementById("clastchr").style.display="block";
+	document.getElementById("subdiv").style.display="block";
+}
+function hideClassTeach()
+{
+	document.getElementById("clastchr").style.display="none";
+	document.getElementById("subdiv").style.display="block";
+}
+</script>
+</body>
+</html>

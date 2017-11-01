@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<title>Shri Kanwartara Public Higher Secondary School Mandleshwar</title>
+<head>
+<style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+*
+{
+	box-sizing:border-box;
+}
+@-webkit-keyframes title
+{
+	0%{text-shadow:5px 5px 15px rgb(0,0,255);}
+	25%{text-shadow:5px 5px 15px rgb(0,0,255),5px 5px 25px rgb(0,0,200);}
+	50%{text-shadow:5px 5px 15px rgb(0,0,255),5px 5px 25px rgb(0,0,200),5px 5px 35px rgb(0,0,100);}
+	75%{text-shadow:5px 5px 15px rgb(0,0,255),5px 5px 25px rgb(0,0,200);}
+	100%{text-shadow:5px 5px 15px rgb(0,0,255);}
+}
+@keyframes title
+{
+	0%{text-shadow:5px 5px 15px rgb(0,0,255);}
+	25%{text-shadow:5px 5px 15px rgb(0,0,255),5px 5px 20px rgb(0,0,200);}
+	50%{text-shadow:5px 5px 15px rgb(0,0,255),5px 5px 20px rgb(0,0,200),5px 5px 25px rgb(0,0,100);}
+	75%{text-shadow:5px 5px 15px rgb(0,0,255),5px 5px 20px rgb(0,0,200);}
+	100%{text-shadow:5px 5px 15px rgb(0,0,255);}
+}
+@font-face
+{
+	font-family:headerFont;
+	src:url("Fonts/BRADHITC.TTF");
+}
+@font-face
+{
+	font-family:Calibri;
+	src:url("Fonts/calibri.TTF");
+}
+h1 {
+    margin-top:50px;
+	color: blue;
+    text-align: center;
+	font-variant:small-caps;
+	animation:title 5s linear 0s infinite alternate;
+	-webkit-animation:title 5s linear 0s infinite alternate;
+	-webkit-transition:font-size 0.4s linear;
+	-moz-transition:font-size 0.4s linear;
+	transition:font-size 0.4s linear;
+	font-family:headerFont;
+	font-weight:bold;
+}
+h1:hover
+{
+	font-size:40px;
+	-webkit-transition:font-size 0.4s linear;
+	-moz-transition:font-size 0.4s linear;
+	transition:font-size 0.4s linear;
+}
+img
+{
+	opacity:1;
+	height:400px;
+	width:100%;
+	position:relative;
+}
+ul
+{
+	background-color:#666;
+	border: 2px solid #444;
+	margin:0;
+	padding:0;
+	list-style-type:none;
+	position:fixed;
+	overflow:hidden;
+	width:99%;
+	z-index:1;
+	top:0px;
+}
+img:hover{opacity:0.7;}
+li{float:left;}
+li a,.drpbtn a
+{
+	display:block;
+	padding:24px;
+	text-align:center;
+	text-decoration:none;
+	color:#ddd;
+	font-family:"Calibri";
+	font-size:20px;
+}
+li a:hover,.drpbtn a:hover
+{
+	background-color:#fff;
+	color:#444;
+	cursor:pointer;
+}
+li a:active,#current
+{
+	background-color:#ccc;
+	color:black;
+}
+.dropdown-cont
+{
+	display:none;
+	background-color:#eee;
+	border:2px solid #aaa;
+	z-index:1;
+	padding:0;
+	margin:0;
+	position:fixed;
+	box-shadow:0 5px 8px 5px rgba(0,0,0,0.2);
+	left:95px;
+	text-align:center;
+}
+.dropdown-cont a
+{
+	color:#111;
+	padding:15px;
+	text-align:center;
+	font-family:"Calibri";
+	font-size:18px;
+	text-decoration:none;
+	display:block;
+}
+.dropdown-cont a:hover
+{
+	background-color:#444;
+	color:#eee;
+}
+.drpbtn:hover .dropdown-cont
+{
+	display:block;
+	cursor:pointer;
+}
+#rightali
+{
+	float:right;
+}
+@media only screen and (max-width:800px)
+{
+	ul,li
+	{
+		width:100%;
+		clear:both;
+		border:1px solid #aaa;
+		display:block;
+		position:static;	
+	}
+	.dropdown-cont, .dropdown-cont a
+	{
+		width:100%;
+		position:static;
+		left:0px;
+		text-align:center;
+		background-color:#222;
+		color:white;
+		clear:both;
+	}
+	.dropdown-cont:hover, .dropdown-cont a:hover
+	{
+		background-color:#eee;
+		color:#111;
+	}
+}
+</style>
+</head>
+<body>
+<ul>
+	<li><a href="#"  id="current">Home</a></li>
+	<li class="drpbtn"><a href="#">Academics</a>
+	<div class="dropdown-cont">
+		<a href="#pre-primary">Pre-Primary</a>
+		<a href="#primary">Primary</a>
+		<a href="#secondary">Secondary</a>
+		<a href="#sen-sec">Senior Secondary</a>
+	</div></li>
+	<li><a href="gallery.htm">Co-corricular</a></li>
+	<li><a href="contacts.htm">Contacts</a></li>
+	<li id="rightali"><a href="about.htm">About</a></li>
+	<li id="rightali"><a href="login.htm">Login\Register</a></li>
+</ul>
+<img src="https://drive.google.com/uc?id=0B6AG6Xrzjm5nd09IUDZIdzVuOEU" alt="Head_image"></img>
+<h1>Shri Kanwartara Public Higher Secondary School Mandleshwar</h1>
+</body>
+</html>
